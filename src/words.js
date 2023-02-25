@@ -1,0 +1,17 @@
+export const words = [
+  { id: 1, word: "hello" },
+  { id: 2, word: "world" },
+  { id: 3, word: "kitty" },
+  { id: 4, word: "puppy" },
+  { id: 5, word: "tokyo" },
+  { id: 6, word: "kyoto" },
+  { id: 7, word: "japan" },
+  { id: 8, word: "osaka" },
+  { id: 9, word: "sushi" },
+  { id: 10, word: "ramen" },
+  { id: 11, word: "today" },
+  { id: 12, word: "phone" },
+  { id: 13, word: "kneel" },
+  { id: 14, word: "stand" },
+  { id: 15, word: "ocean" },
+];
