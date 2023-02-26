@@ -9,7 +9,28 @@ const useWordle = (solution) => {
 
   // format a guess into an array of letter objects
   const formatGuess = () => {
-    console.log("Formatting...", currentGuess);
+    let solutionArray = [...solution]; // spread string into array of chars
+    let formattedGuess = [...currentGuess].map((letter) => {
+      return { key: letter, color: "grey" };
+    });
+
+    // find green letters
+    formattedGuess.forEach((letter, i) => {
+      if (solutionArray[i] === letter.key) {
+        formattedGuess[i].color = "green";
+        solutionArray[i] = null;
+      }
+    });
+
+    // find yellow letters
+    formattedGuess.forEach((letter, i) => {
+      if (solutionArray.includes(letter.key) && letter.color !== "green") {
+        formattedGuess[i].color = "yellow";
+        solutionArray[solutionArray.indexOf(letter.key)] = null;
+      }
+    });
+
+    return formattedGuess;
   };
 
   // add new guess to the guesses state
@@ -35,7 +56,8 @@ const useWordle = (solution) => {
         console.log("word needs to have 5 letters");
         return;
       }
-      formatGuess();
+      const formatted = formatGuess();
+      console.log(formatted);
     }
 
     if (key === "Backspace") {
