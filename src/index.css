@@ -35,14 +35,33 @@ h1 {
 .row > div.green {
   background: #53cc53;
   border-color: #53cc53;
+  animation: flip 0.5s ease forwards;
 }
 
 .row > div.grey {
   background: #bebebe;
   border-color: #bebebe;
+  animation: flip 0.5s ease forwards;
 }
 
 .row > div.yellow {
   background: #eed45f;
   border-color: #eed45f;
+  animation: flip 0.5s ease forwards;
+}
+
+/* animations */
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+  45% {
+    transform: rotateX(90deg);
+  }
+  55% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
 }
