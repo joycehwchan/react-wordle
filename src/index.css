@@ -124,3 +124,21 @@ h1 {
   border-radius: 6px;
   line-height: 50px;
 }
+
+.keypad > div.green {
+  background: #45bd45;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.keypad > div.yellow {
+  background: #e6c328;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.keypad > div.grey {
+  background: #a6a6a6;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
